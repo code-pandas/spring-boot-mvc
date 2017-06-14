@@ -18,4 +18,10 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
     }
+
+    @RequestMapping("/greet")
+    public Greeting greet() {
+        return new Greeting(counter.incrementAndGet(), "Welcome!!");
+    }
+
 }
