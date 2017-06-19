@@ -1,7 +1,10 @@
 package springapp.boot.mvc.model;
 
+import org.springframework.data.annotation.Id;
+
 public class Greeting {
 
+    @Id
     private final long id;
     private final String content;
 
@@ -18,4 +21,12 @@ public class Greeting {
         return content;
     }
 
+
+    @Override
+    public String toString() {
+        return "Greeting{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                '}';
+    }
 }
